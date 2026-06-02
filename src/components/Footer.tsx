@@ -91,6 +91,14 @@ export default function Footer() {
       setTimeout(() => {
         setStatusStep('Delivering to inbox...');
         setTimeout(() => {
+          // Create mailto link with form data
+          const subject = encodeURIComponent(`[Portfolio Inquiry] ${formData.service} - ${formData.name}`);
+          const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nService: ${formData.service}\n\nMessage:\n${formData.message}`);
+          const mailtoUrl = `mailto:aryan19abhishek@gmail.com?subject=${subject}&body=${body}`;
+          
+          // Open user's default email client
+          window.location.href = mailtoUrl;
+          
           setStatus('success');
         }, 600);
       }, 600);
