@@ -30,7 +30,7 @@ export default function Services() {
           >
             {/* The Generated services photograph */}
             <img
-              src="/src/assets/images/services_trophies_1780154964755.png"
+              src="/assets/images/services_trophies_1780154964755.png"
               alt="Aryan Abhishek Design Concept"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"

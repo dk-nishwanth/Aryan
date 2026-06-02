@@ -28,7 +28,7 @@ export default function MotionShortsView({ onBack }: MotionShortsViewProps) {
       description: 'Exploring seamless morphing of 2D geometrical elements into corporate logo frameworks. Built entirely with custom Bezier speed graphs to control timing and weight.',
       tag: 'Interactive Motion Laboratory',
       year: '2024',
-      image: '/src/assets/images/motion_frame_shapes_1780159369545.png',
+      image: '/assets/images/motion_frame_shapes_1780159369545.png',
       specs: {
         framerate: '60 FPS Lossless Scale',
         resolution: '1080x1080 (1:1 Ratio)',
@@ -47,7 +47,7 @@ export default function MotionShortsView({ onBack }: MotionShortsViewProps) {
       description: 'Character rigging project animating welcoming cartoon personnel managing a digital coin chart. Synchronized with tactile audio clicks.',
       tag: 'Interactive Motion Laboratory',
       year: '2023',
-      image: '/src/assets/images/zave_ui_system_1780159329350.png',
+      image: '/assets/images/zave_ui_system_1780159329350.png',
       specs: {
         framerate: '30 FPS Character Rig',
         resolution: '1920x1080 (16:9 Landscape)',
@@ -66,7 +66,7 @@ export default function MotionShortsView({ onBack }: MotionShortsViewProps) {
       description: 'A fast-paced kinetic typography single introduction for hip-hop launches. Combines extreme tracking stretch, high-contrast dark theme presets, and glitch overlayers.',
       tag: 'Interactive Motion Laboratory',
       year: '2024',
-      image: '/src/assets/images/kalamkaar_poster_1780159351293.png',
+      image: '/assets/images/kalamkaar_poster_1780159351293.png',
       specs: {
         framerate: '60 FPS Expressive Type',
         resolution: '1080x1920 (9:16 Vertical Reel)',

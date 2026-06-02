@@ -136,7 +136,7 @@ export default function Header({ onAboutClick, onExperienceClick }: HeaderProps)
           <div className="relative overflow-hidden rounded-[20px] bg-[#ECE7DC] p-3 sm:p-8 flex items-center justify-center border border-black/[0.04] aspect-[16/10] sm:aspect-[16/9]">
             {/* The Generated Mockup Frame */}
             <img
-              src="/src/assets/images/farewill_hero_phone_1780154988405.png"
+              src="/assets/images/farewill_hero_phone_1780154988405.png"
               alt="Farewill Smartphone Mockup"
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain"

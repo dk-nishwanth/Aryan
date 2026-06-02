@@ -27,14 +27,14 @@ export default function ProjectCaseStudy({ project, onBack }: ProjectCaseStudyPr
     switch (id) {
       case 'behind-design':
         return {
-          heroImage: '/src/assets/images/kalamkaar_poster_1780159351293.png',
+          heroImage: '/assets/images/kalamkaar_poster_1780159351293.png',
           category: 'Branding, Art Direction, Motion Graphics',
           type: 'Personal Project',
           year: '2022',
           description: '"Behind Design" is a branding project that aims to create a cohesive and engaging identity for a new podcast that promises to be a valuable resource for anyone interested in the world of design in India.',
           images: [
-            { src: '/src/assets/images/motion_frame_shapes_1780159369545.png', title: 'Episode 002' },
-            { src: '/src/assets/images/dwan_music_visuals_1780157941722.png', title: 'Episode 001' },
+            { src: '/assets/images/motion_frame_shapes_1780159369545.png', title: 'Episode 002' },
+            { src: '/assets/images/dwan_music_visuals_1780157941722.png', title: 'Episode 001' },
           ],
           sections: [
             {
@@ -95,14 +95,14 @@ export default function ProjectCaseStudy({ project, onBack }: ProjectCaseStudyPr
         };
       case 'disney-shopping-app':
         return {
-          heroImage: '/src/assets/images/kama_iphone_1780154940227.png',
+          heroImage: '/assets/images/kama_iphone_1780154940227.png',
           category: 'UI/UX',
           type: 'Personal Project',
           year: '2021',
           description: 'This Project is a E-commerce Application for the existing Disney Shopping website which offers Disney official Merch',
           images: [
-            { src: '/src/assets/images/farewill_hero_phone_1780154988405.png', title: 'iPad mini 8.3 - 2' },
-            { src: '/src/assets/images/farewill_laptop_1780154892757.png', title: 'UI Components' },
+            { src: '/assets/images/farewill_hero_phone_1780154988405.png', title: 'iPad mini 8.3 - 2' },
+            { src: '/assets/images/farewill_laptop_1780154892757.png', title: 'UI Components' },
           ],
           sections: [
             {
@@ -171,14 +171,14 @@ export default function ProjectCaseStudy({ project, onBack }: ProjectCaseStudyPr
         };
       case 'grace':
         return {
-          heroImage: '/src/assets/images/re_helmet_design_1780157894631.png',
+          heroImage: '/assets/images/re_helmet_design_1780157894631.png',
           category: 'Branding, Art Direction, Packaging',
           type: 'Personal Project',
           year: '2021',
           description: 'Grace is a fashion branding project that focuses on luxury formal attires for females.',
           images: [
-            { src: '/src/assets/images/spatial_exhibit_1780159389308.png', title: 'Sign_Mockup01_MicroVolume' },
-            { src: '/src/assets/images/services_trophies_1780154964755.png', title: 'Boxes' },
+            { src: '/assets/images/spatial_exhibit_1780159389308.png', title: 'Sign_Mockup01_MicroVolume' },
+            { src: '/assets/images/services_trophies_1780154964755.png', title: 'Boxes' },
           ],
           sections: [
             {
@@ -194,20 +194,20 @@ export default function ProjectCaseStudy({ project, onBack }: ProjectCaseStudyPr
         };
       case 'artist-management':
         return {
-          heroImage: '/src/assets/images/zave_fintech_app_1780157917788.png',
+          heroImage: '/assets/images/zave_fintech_app_1780157917788.png',
           category: 'UI/UX, Web Design',
           type: 'Tcules UI/UX Placement Task',
           year: '2023',
           description: 'An Event/Artist Management interface for the event organizers where the organizer can see the status of the information that they requested from each manager of the bands performing.',
           images: [
-            { src: '/src/assets/images/zave_ui_system_1780159329350.png', title: 'Dashboard' },
+            { src: '/assets/images/zave_ui_system_1780159329350.png', title: 'Dashboard' },
           ],
           sections: [],
           galleryImages: [],
         };
       case 'wild-young':
         return {
-          heroImage: '/src/assets/images/headspace_billboard_1780154913817.png',
+          heroImage: '/assets/images/headspace_billboard_1780154913817.png',
           category: 'Branding, Motion Graphics',
           type: 'Personal Project',
           year: '2022',

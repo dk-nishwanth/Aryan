@@ -21,9 +21,9 @@ export default function GraduationProjectView({ onBack }: GraduationProjectViewP
   }, []);
 
   const projectImages = [
-    { src: '/src/assets/images/kalamkaar_poster_1780159351293.png', title: 'Behind Design Thesis - Graduation Style Frame 03' },
-    { src: '/src/assets/images/zave_ui_system_1780159329350.png', title: 'Behind Design Thesis - UI System' },
-    { src: '/src/assets/images/motion_frame_shapes_1780159369545.png', title: 'Behind Design Thesis - Motion Frames' },
+    { src: '/assets/images/kalamkaar_poster_1780159351293.png', title: 'Behind Design Thesis - Graduation Style Frame 03' },
+    { src: '/assets/images/zave_ui_system_1780159329350.png', title: 'Behind Design Thesis - UI System' },
+    { src: '/assets/images/motion_frame_shapes_1780159369545.png', title: 'Behind Design Thesis - Motion Frames' },
   ];
 
   const researchInsights = [
