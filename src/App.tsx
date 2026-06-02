@@ -14,6 +14,7 @@ import Experience from './components/Experience';
 import Footer from './components/Footer';
 import ProjectCaseStudy from './components/ProjectCaseStudy';
 import { Project } from './types';
+import LoadingScreen from './components/LoadingScreen';
 
 // Sub-page Views
 import AboutView from './components/AboutView';
@@ -27,6 +28,7 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'about' | 'experience' | 'brand-work' | 'motion-shorts' | 'grad-project' | 'small-projects' | 'case-study'>('home');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // Monitor general page scroll for progress indicator
   useEffect(() => {
@@ -38,6 +40,15 @@ export default function App() {
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Simulate loading time
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const handleSelectProject = (project: Project) => {
@@ -120,18 +131,21 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] flex flex-col relative selection:bg-[#6E8FEA] selection:text-white">
-      {/* Tiny top indicator progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-[3px] bg-neutral-200/50 z-50 pointer-events-none">
-        <motion.div
-          className="h-full bg-[#6E8FEA]"
-          style={{ width: `${scrollProgress * 100}%` }}
-        />
-      </div>
+    <>
+      <LoadingScreen isLoaded={isLoaded} />
+      <div className="min-h-screen bg-[#FAFAFA] flex flex-col relative selection:bg-[#6E8FEA] selection:text-white">
+        {/* Tiny top indicator progress bar */}
+        <div className="fixed top-0 left-0 right-0 h-[3px] bg-neutral-200/50 z-50 pointer-events-none">
+          <motion.div
+            className="h-full bg-[#6E8FEA]"
+            style={{ width: `${scrollProgress * 100}%` }}
+          />
+        </div>
 
-      <AnimatePresence mode="wait">
-        {renderViewContent()}
-      </AnimatePresence>
-    </div>
+        <AnimatePresence mode="wait">
+          {isLoaded && renderViewContent()}
+        </AnimatePresence>
+      </div>
+    </>
   );
 }
