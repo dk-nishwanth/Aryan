@@ -9,9 +9,10 @@ import { ArrowLeft, User, Sparkles, Compass, Hexagon, Mail, Linkedin, Instagram,
 
 interface AboutViewProps {
   onBack: () => void;
+  onContactClick: () => void;
 }
 
-export default function AboutView({ onBack }: AboutViewProps) {
+export default function AboutView({ onBack, onContactClick }: AboutViewProps) {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
@@ -38,6 +39,13 @@ export default function AboutView({ onBack }: AboutViewProps) {
           <span className="text-xl">☻</span>
           <span className="text-xs font-bold text-[#6E8FEA] uppercase tracking-wider">Meet the Designer</span>
         </div>
+
+        <button
+          onClick={onContactClick}
+          className="text-xs sm:text-sm font-semibold text-neutral-600 hover:text-[#6E8FEA] transition-all duration-300 ease-out cursor-pointer"
+        >
+          Contact
+        </button>
       </nav>
 
       {/* Hero Header Area */}

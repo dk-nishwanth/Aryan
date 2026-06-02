@@ -10,9 +10,10 @@ import ImageLightbox from './ImageLightbox';
 
 interface BrandWorkViewProps {
   onBack: () => void;
+  onContactClick: () => void;
 }
 
-export default function BrandWorkView({ onBack }: BrandWorkViewProps) {
+export default function BrandWorkView({ onBack, onContactClick }: BrandWorkViewProps) {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [lightboxTitle, setLightboxTitle] = useState<string>('');
 
@@ -120,6 +121,12 @@ export default function BrandWorkView({ onBack }: BrandWorkViewProps) {
         <div className="hidden sm:flex items-center gap-3">
           <span className="text-xs font-mono text-neutral-400 uppercase tracking-widest">2023-Present</span>
         </div>
+        <button
+          onClick={onContactClick}
+          className="text-xs sm:text-sm font-semibold text-neutral-600 hover:text-[#6E8FEA] transition-all duration-300 ease-out cursor-pointer"
+        >
+          Contact
+        </button>
       </nav>
 
       {/* Hero Section */}

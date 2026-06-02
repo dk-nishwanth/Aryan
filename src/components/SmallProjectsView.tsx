@@ -10,9 +10,10 @@ import ImageLightbox from './ImageLightbox';
 
 interface SmallProjectsViewProps {
   onBack: () => void;
+  onContactClick: () => void;
 }
 
-export default function SmallProjectsView({ onBack }: SmallProjectsViewProps) {
+export default function SmallProjectsView({ onBack, onContactClick }: SmallProjectsViewProps) {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [lightboxTitle, setLightboxTitle] = useState<string>('');
   const [selectedSpecIndex, setSelectedSpecIndex] = useState<number>(0);
@@ -94,6 +95,12 @@ export default function SmallProjectsView({ onBack }: SmallProjectsViewProps) {
         <div className="hidden sm:flex items-center gap-3">
           <span className="text-xs font-mono text-neutral-400 uppercase tracking-widest">Ongoing Sandbox</span>
         </div>
+        <button
+          onClick={onContactClick}
+          className="text-xs sm:text-sm font-semibold text-neutral-600 hover:text-[#6E8FEA] transition-all duration-300 ease-out cursor-pointer"
+        >
+          Contact
+        </button>
       </nav>
 
       {/* Hero Section */}

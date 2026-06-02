@@ -66,20 +66,34 @@ export default function App() {
     }
   };
 
+  const handleContactClick = () => {
+    if (currentView === 'home') {
+      // If on home page, scroll to footer
+      document.getElementById('footer-contact')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If on other pages, go back to home first, then after transition, scroll
+      setCurrentView('home');
+      // Wait for home page to render, then scroll to footer
+      setTimeout(() => {
+        document.getElementById('footer-contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
+  };
+
   const renderViewContent = () => {
     switch (currentView) {
       case 'about':
-        return <AboutView onBack={() => setCurrentView('home')} />;
+        return <AboutView onBack={() => setCurrentView('home')} onContactClick={handleContactClick} />;
       case 'experience':
-        return <ExperienceView onBack={() => setCurrentView('home')} />;
+        return <ExperienceView onBack={() => setCurrentView('home')} onContactClick={handleContactClick} />;
       case 'brand-work':
-        return <BrandWorkView onBack={() => setCurrentView('home')} />;
+        return <BrandWorkView onBack={() => setCurrentView('home')} onContactClick={handleContactClick} />;
       case 'motion-shorts':
-        return <MotionShortsView onBack={() => setCurrentView('home')} />;
+        return <MotionShortsView onBack={() => setCurrentView('home')} onContactClick={handleContactClick} />;
       case 'grad-project':
-        return <GraduationProjectView onBack={() => setCurrentView('home')} />;
+        return <GraduationProjectView onBack={() => setCurrentView('home')} onContactClick={handleContactClick} />;
       case 'small-projects':
-        return <SmallProjectsView onBack={() => setCurrentView('home')} />;
+        return <SmallProjectsView onBack={() => setCurrentView('home')} onContactClick={handleContactClick} />;
       case 'case-study':
         return activeProject ? (
           <ProjectCaseStudy
@@ -106,6 +120,7 @@ export default function App() {
             <Header
               onAboutClick={() => setCurrentView('about')}
               onExperienceClick={() => setCurrentView('experience')}
+              onContactClick={handleContactClick}
             />
 
             {/* Featured Grid Section (First Focus: Projects to Showcase) */}

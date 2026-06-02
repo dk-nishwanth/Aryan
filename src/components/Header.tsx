@@ -10,9 +10,10 @@ import { useState } from 'react';
 interface HeaderProps {
   onAboutClick: () => void;
   onExperienceClick: () => void;
+  onContactClick: () => void;
 }
 
-export default function Header({ onAboutClick, onExperienceClick }: HeaderProps) {
+export default function Header({ onAboutClick, onExperienceClick, onContactClick }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -47,7 +48,7 @@ export default function Header({ onAboutClick, onExperienceClick }: HeaderProps)
             About
           </button>
           <button
-            onClick={() => document.getElementById('footer-contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={onContactClick}
             className="hover:text-black/70 cursor-pointer transition-colors duration-200"
           >
             Contact
@@ -102,7 +103,7 @@ export default function Header({ onAboutClick, onExperienceClick }: HeaderProps)
               </button>
               <button
                 onClick={() => {
-                  document.getElementById('footer-contact')?.scrollIntoView({ behavior: 'smooth' });
+                  onContactClick();
                   setMobileMenuOpen(false);
                 }}
                 className="text-lg font-medium text-neutral-900 hover:text-black/70 cursor-pointer transition-colors duration-200"

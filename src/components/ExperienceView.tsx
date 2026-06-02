@@ -9,9 +9,10 @@ import { ArrowLeft, Clock, Dot, Flag, Compass, Award, ExternalLink } from 'lucid
 
 interface ExperienceViewProps {
   onBack: () => void;
+  onContactClick: () => void;
 }
 
-export default function ExperienceView({ onBack }: ExperienceViewProps) {
+export default function ExperienceView({ onBack, onContactClick }: ExperienceViewProps) {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
@@ -104,6 +105,13 @@ export default function ExperienceView({ onBack }: ExperienceViewProps) {
           <Clock className="w-4.5 h-4.5 text-[#6E8FEA]" />
           <span className="text-xs font-bold text-[#6E8FEA] uppercase tracking-wider">Work History Details</span>
         </div>
+
+        <button
+          onClick={onContactClick}
+          className="text-xs sm:text-sm font-semibold text-neutral-600 hover:text-[#6E8FEA] transition-all duration-300 ease-out cursor-pointer"
+        >
+          Contact
+        </button>
       </nav>
 
       {/* Hero Header Area */}
